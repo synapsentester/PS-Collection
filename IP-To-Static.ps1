@@ -9,7 +9,7 @@ Write-Output "Hauptskript wird mit Administratorrechten ausgeführt."
 $IP = Read-Host "Neu IP eingeben"
 $MaskBits = 24 # This means subnet mask = 255.255.255.0
 $Gateway = Read-Host "Gateway eingeben"
-$Dns = @("130.220.12.9", "130.220.12.10")
+$Dns = @("xxx.xxx.xxx.xxx", "xxx.xxx.xxx.xxx")
 
 Write-Output $IP
 Write-Output $Gateway
