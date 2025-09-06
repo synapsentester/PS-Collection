@@ -6,7 +6,8 @@ Erweitertes Skript:
 - Schreibt die Infos auch ins Windows Eventlog (eigene Quelle "BitLocker-Setup").
 - Dateiname enthält Computername, die beste verfügbare Seriennummer und Datum/Zeit.
 - TXT enthält alle drei Seriennummern zur Nachvollziehbarkeit.
-#>
+#> 
+#gittest
 
 #region Einstellungen
 # Systemlaufwerk automatisch ermitteln
