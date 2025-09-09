@@ -9,7 +9,7 @@ foreach ($regel in $regeln) {
         'out'  { 'out' }
         'Eingehend'  { 'in' }
         'Aus' { 'out' }
-        default     { throw "❌ Ungültige Richtung: $($regel.Richtung)" }
+        default     { throw "Ungültige Richtung: $($regel.Richtung)" }
     }
 
     $RuleAction = switch ($regel.Aktion) {
@@ -27,7 +27,7 @@ foreach ($regel in $regeln) {
         'UDP'   { 'UDP' }
         'ANY'   { 'ANY' }
         'Beliebig'  { 'ANY' }
-        default { throw "❌ Ungültiges Protokoll: $($regel.Protokoll)" }
+        default { throw "Ungültiges Protokoll: $($regel.Protokoll)" }
     }
 
     $RuleActive = switch ($regel.Aktiviert) {
@@ -42,7 +42,7 @@ foreach ($regel in $regeln) {
         'Nein'                  { 'no' }
         'Anwendung verzögert'  { 'deferapp' }
         'Auf Benutzer zurückstellen'   { 'deferuser' }
-        default                { throw "❌ Ungültiger Edgeausnahme-Wert: $($regel.Edgeausnahme)" }
+        default                { throw "Ungültiger Edgeausnahme-Wert: $($regel.Edgeausnahme)" }
     }
 
     $mappedProfiles = @()
@@ -150,3 +150,4 @@ if ($RuleProtocol -in @('TCP', 'UDP')) {
     # Optional ausführen:
     Invoke-Expression $command
 }
+
